@@ -1,3 +1,5 @@
+import tensorflow as tf
+
 def windowed_dataset(series, window_size, batch_size, shuffle_buffer):
   dataset = tf.data.Dataset.from_tensor_slices(series)
   dataset = dataset.window(window_size + 1, shift=1, drop_remainder=True)
