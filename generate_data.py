@@ -1,3 +1,5 @@
+import numpy as np
+
 def trend(time, slope=0):
     return slope * time
 
